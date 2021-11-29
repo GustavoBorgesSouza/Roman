@@ -32,7 +32,7 @@ namespace senai_roman_webAPI
 
             services.AddCors(options =>
             {
-                options.AddPolicy("CorPolicy",
+                options.AddPolicy("CorsPolicy",
                                 builder =>
                                 {
                                     builder.WithOrigins("http://localhost:3000", "http://localhost:3001")
@@ -89,15 +89,11 @@ namespace senai_roman_webAPI
 
             app.UseRouting();
 
-            app.UseCors("CorPolicy");
-
-
-            app.UseAuthorization();
+            app.UseCors("CorsPolicy");
 
             app.UseAuthentication();
 
-
-            app.UseRouting();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
