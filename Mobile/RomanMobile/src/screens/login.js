@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
@@ -7,6 +7,7 @@ import {
   Image,
   ImageBackground,
   TextInput,
+  ImageBase,
 } from 'react-native';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -31,8 +32,8 @@ export default class Login extends Component {
     console.warn(this.state.email + ' ' + this.state.senha);
 
     const resposta = await api.post('/login', {
-      email: this.state.email, 
-      senha: this.state.senha, 
+      email: this.state.email,
+      senha: this.state.senha,
     });
 
     //mostrar no swagger para montar.
@@ -47,44 +48,98 @@ export default class Login extends Component {
 
     console.warn(token);
 
-    
+
   };
 
   render() {
     return (
+    
       
+
+
+      <View style={styles.CorpoLogin}>
+
+        <Image
+          source={require('../assets/coruja.png')}
+          style={styles.ImgLogin}
+        />
         
-        
-        <View>
 
-          <TextInput
-            placeholder="email"
-            placeholderTextColor="#FFF"
-            keyboardType="email-address"
-            // ENVENTO PARA FAZERMOS ALGO ENQUANTO O TEXTO MUDA
-            onChangeText={email => this.setState({email})}
-          />
+        <View style={styles.CorpoTitulo}>
+        <Text style={styles.TituloLogin}> Login </Text>
 
-          <TextInput
-            placeholder="password"
-            placeholderTextColor="#FFF"
-            keyboardType="default" //para default nao obrigatorio.
-            secureTextEntry={true} //proteje a senha.
-            // ENVENTO PARA FAZERMOS ALGO ENQUANTO O TEXTO MUDA
-            onChangeText={senha => this.setState({senha})}
-          />
-
-          <TouchableOpacity
-            style={styles.btnLogin}
-            onPress={this.realizarLogin}>
-            <Text>Login</Text>
-          </TouchableOpacity>
         </View>
-      
+        
+
+        <TextInput
+          style={StyleSheet.inputLogin}
+          placeholder="email"
+          placeholderTextColor="#FFF"
+          keyboardType="email-address"
+          // ENVENTO PARA FAZERMOS ALGO ENQUANTO O TEXTO MUDA
+          onChangeText={email => this.setState({ email })}
+        />
+
+        <TextInput
+          placeholder="password"
+          placeholderTextColor="#FFF"
+          keyboardType="default" //para default nao obrigatorio.
+          secureTextEntry={true} //proteje a senha.
+          // ENVENTO PARA FAZERMOS ALGO ENQUANTO O TEXTO MUDA
+          onChangeText={senha => this.setState({ senha })}
+        />
+
+        <TouchableOpacity
+          style={styles.btnLogin}
+          onPress={this.realizarLogin}>
+          <Text>Login</Text>
+        </TouchableOpacity>
+
+      </View>
+
+
+
     );
   }
 }
 
 const styles = StyleSheet.create({
- 
-});
+
+  TituloLogin:{
+  color: '#009DF5',
+  fontSize: 37,
+  borderBottomColor: '#009DF5',
+  borderBottomWidth: 1,
+  width:165,
+
+  },
+  CorpoTitulo:{
+    display: 'flex',
+    alignItems: 'center',
+
+  },
+
+  inputLogin: {
+    width: 500,
+    height: 54,
+  },
+
+  ImgLogin: {
+    height: 200,
+    width: 200,
+    left: 106,
+    top: -27,
+  },
+    
+    btnLogin: {
+    
+    
+    },
+    CorpoLogin:{
+     flex : 1,
+     height: '100%',
+     backgroundColor: ' rgba(255, 222, 50, 0.34)', 
+    }
+
+  },
+);
