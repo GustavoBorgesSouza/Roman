@@ -17,11 +17,11 @@ export default class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
-      senha: '',
+      email: 'professor@gmail.com',
+      senha: '987654321',
     };
   }
-  //como vamos trabalhar com assync historage,
+  //como vamos trabalhar com assync storage,
   //nossa funcao tem que ser async.
   realizarLogin = async () => {
     //nao temos mais  console log.
@@ -42,6 +42,7 @@ export default class Login extends Component {
     //agora sim podemos descomentar.
     if (resposta.status == 200) {
       this.props.navigation.navigate('Main');
+      console.warn("LOGOUUU!!!");
     }
 
     console.warn(token);
@@ -55,10 +56,8 @@ export default class Login extends Component {
         
         
         <View>
-          
 
           <TextInput
-            style={styles.inputLogin}
             placeholder="email"
             placeholderTextColor="#FFF"
             keyboardType="email-address"
@@ -67,7 +66,6 @@ export default class Login extends Component {
           />
 
           <TextInput
-            style={styles.inputLogin}
             placeholder="password"
             placeholderTextColor="#FFF"
             keyboardType="default" //para default nao obrigatorio.
@@ -79,7 +77,7 @@ export default class Login extends Component {
           <TouchableOpacity
             style={styles.btnLogin}
             onPress={this.realizarLogin}>
-            <Text style={styles.btnLoginText}>Login</Text>
+            <Text>Login</Text>
           </TouchableOpacity>
         </View>
       

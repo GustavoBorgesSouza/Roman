@@ -11,8 +11,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 const bottomTab = createBottomTabNavigator();
 
 import Cadastro from './Cadastrar';
-import Projetos from './projetos';
-import Perfil from './perfil';
+import Projetos from './Projetos';
+import Perfil from './Perfil';
 
 class Main extends Component {
 
@@ -30,33 +30,42 @@ class Main extends Component {
               tabBarIcon: () => {
                 if (route.name === 'Cadastro') {
                   return(
-                    <Text>C</Text>
+                    <Image
+                      source={require('../assets/plus-square-regular.png')}
+                      style={styles.tabBarIconP}
+                    />
                   )
                 }
                 if (route.name === 'Projetos') {
                   return(
-                    <Text>Pro</Text>
+                    <Image
+                      source={require('../assets/clipboard-list-solid.png')}
+                      style={styles.tabBarIconL}
+                    />
                   )
                 }
                 if (route.name === 'Perfil') {
                   return(
-                    <Text>P</Text>
+                    <Image
+                      source={require('../assets/sign-out-alt-solid.png')}
+                      style={styles.tabBarIconS}
+                    />
                   )
                 }
               },
 
               // React Navigation 6.x
               headerShown: false,
-              tabBarShowLabel: true,
+              tabBarShowLabel: false,
               tabBarActiveBackgroundColor: '#68c2e8',
               tabBarInactiveBackgroundColor: '#009df5',
               // tabBarActiveTintColor: 'blue',
               // tabBarInactiveTintColor: 'red',
-              tabBarStyle: { height: 50 }              
+              tabBarStyle: { height: 80 }              
             }) }
           >
-            <bottomTab.Screen name="Cadastro" component={Cadastro} />
             <bottomTab.Screen name="Projetos" component={Projetos} />
+            <bottomTab.Screen name="Cadastro" component={Cadastro} />
             <bottomTab.Screen name="Perfil" component={Perfil} />
           </bottomTab.Navigator>        
 
@@ -75,9 +84,19 @@ const styles = StyleSheet.create({
   },
 
   // estilo dos ícones da tabBar
-  tabBarIcon: {
-    width: 22,
-    height: 22
+  tabBarIconL: {
+    width: 41,
+    height: 54,   
+  },
+
+  tabBarIconP: {
+    width: 45,
+    height: 46   
+  },
+
+  tabBarIconS: {
+    width: 55,
+    height: 46   
   }
 
 });

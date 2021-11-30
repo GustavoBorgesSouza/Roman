@@ -8,7 +8,7 @@ import {
     ScrollView
 } from 'react-native';
 
-import api from './src/services/api';
+import api from '../services/api';
 
 class Projetos extends Component {
     constructor(props) {
