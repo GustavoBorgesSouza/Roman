@@ -5,7 +5,7 @@
    O projeto Roman é um Aplicativo Mobile com fins pedagógicos.
    A escola de tecnologia, desenvolve exercícios com escopos 
    dedicado aos alunos, para não ser de forma individualizada o 
-   apk foi projetado com  o intuito de auxiliar no compartilhamento
+   app foi projetado com  o intuito de auxiliar no compartilhamento
    das propostas de projetos entre os professores afim de tornar 
    algo mais dinâmico.
 
@@ -63,16 +63,8 @@
 
    Depois execute a Api, clicando no botão de play.
 
-  ### 5º Quinto Passo
-   Uma opção é utilizar aplicativos para realizar as requisições como o 
-   Postman, escolha qual tipo de requisição que deseja realizar, ou seja
-   GET, POST, HEAD, OPTIONS, PUT, DELETE e TRACE. Copiando o caminho e passando
-   {link/api/campo}.
-   Execute a aplicação e faça requisições pelo domínio 
-   http://localhost:5000
-
-  ### 6º Sexto Passo
+   ### 5º Quinto Passo
    Para rodar o projeto utlizamos o android studio, configuramos todas as configurações de ambiente, depois abrimos 
    o cmd para criar o projeto ultilizando "npx reacte-native init Roman" para criar o nosso projeto Roman, o proximo 
    passo é digitar "cd Roman" para entrarmos na pasta de nosso projeto, por último digitamos "npx react-native run-android"
-   para abrirmos nossa aplicação, ai só ser feliz e estilizar as telas.
+   para abrirmos nossa aplicação.
