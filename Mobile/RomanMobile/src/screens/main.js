@@ -8,6 +8,7 @@ import {
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+
 const bottomTab = createBottomTabNavigator();
 
 import Cadastro from './Cadastrar';
@@ -61,7 +62,8 @@ class Main extends Component {
               tabBarInactiveBackgroundColor: '#009df5',
               // tabBarActiveTintColor: 'blue',
               // tabBarInactiveTintColor: 'red',
-              tabBarStyle: { height: 80 }              
+              tabBarStyle: { height: 80 },
+                         
             }) }
           >
             <bottomTab.Screen name="Projetos" component={Projetos} />
