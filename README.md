@@ -1,7 +1,7 @@
 # <p align="center"> Welcome to Roman!💻</p>
 
 ## <p align="center">Trello 📝</p>
-<p align="center">Aqui temos o Trello feito pela equipe do grupo 4, este que é o ambiente utilizado para organizar o projeto de acordo com tarefas, etapas e integrantes.</p>
+<p align="center">Aqui temos o Trello feito pela equipe do grupo 4, este que é o ambiente utilizado para organizar o projeto de acordo com as tarefas, etapas e integrantes.</p>
 
 
 <p align="center"><a href="https://trello.com/b/CJmPLWyu/roman"> <img src="https://img.shields.io/badge/Trello-0052CC?style=for-the-badge&logo=trello&logoColor=white" /> </a></p>
