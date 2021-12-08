@@ -18,8 +18,8 @@ export default class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
-      senha: '',
+      email: 'professor@gmail.com',
+      senha: '987654321',
     };
   }
   //como vamos trabalhar com assync storage,
@@ -47,15 +47,9 @@ export default class Login extends Component {
     }
 
     console.warn(token);
-
-
   };
-
   render() {
     return (
-
-
-
 
       <View style={styles.CorpoLogin}>
 
@@ -109,11 +103,12 @@ const styles = StyleSheet.create({
 
   TituloLogin: {
     color: '#009DF5',
-    fontSize: 37,
+    fontSize: 40,
+    fontFamily: 'BebasNeue-Regular',
   },
 
   CorpoTitulo: {
-  width: 165,
+   width: 165,
    alignItems:'center',
    borderBottomColor: '#009DF5',
    borderBottomWidth: 3,
@@ -122,17 +117,18 @@ const styles = StyleSheet.create({
   inputEmail: {
     width: 304,
     height: 54,
+    paddingLeft: 20,
     backgroundColor: 'white',
     borderRadius: 20,
     borderColor: '#009DF5',
     borderWidth: 2,
     marginTop: 38,
-
-
   },
+
   inputSenha: {
     width: 304,
     height: 54,
+    paddingLeft: 20,
     backgroundColor: 'white',
     color: '#A4A4A4',
     borderRadius: 20,
@@ -148,7 +144,7 @@ const styles = StyleSheet.create({
     borderWidth:2,
     borderRadius: 20,
     backgroundColor: 'white',
-    marginTop:50,
+    marginTop:40,
     display:'flex',
     alignItems: 'center',
 
@@ -157,7 +153,7 @@ const styles = StyleSheet.create({
   ImgLogin: {
     height: 150,
     width: 150,
-
+    marginTop:30,
   },
 
 
@@ -172,13 +168,12 @@ const styles = StyleSheet.create({
   },
 
   CorpoEmail: {
-    marginTop: 20,
+    marginTop: 40,
     borderWidth: 3,
     borderColor: 'white',
     borderRadius: 20,
-    height: 284,
+    height: 330,
     width: 353,
-    flex: 1,
     display: 'flex',
     alignItems: 'center',
     marginBottom: 30,
@@ -186,7 +181,9 @@ const styles = StyleSheet.create({
 
   Entrar:{
     color:'#009DF5',
-    marginTop:13,
+    marginTop:10,
+    fontFamily: 'BebasNeue-Regular',
+    fontSize:25,
     
   }
 

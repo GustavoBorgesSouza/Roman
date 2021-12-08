@@ -70,11 +70,9 @@ const styles = StyleSheet.create({
     },
 
     titulo: {
-        textTransform: 'uppercase',
         color: '#009DF5',
-        fontWeight: 'bold',
-        fontFamily: "Bebas Neue",
-        fontSize: 26
+        fontFamily: "BebasNeue-Regular",
+        fontSize: 40,
     },
 
     main: {
@@ -85,7 +83,7 @@ const styles = StyleSheet.create({
     },
     corujaLogo: {
         width: '100%',
-        height: '90%'
+        height: '80%',
     },
     btn: {
        
@@ -94,7 +92,7 @@ const styles = StyleSheet.create({
     btnText: {
         color: '#009DF5',
         fontWeight: 'bold',
-        fontSize: 18
+        fontSize: 30
     }
 });
 

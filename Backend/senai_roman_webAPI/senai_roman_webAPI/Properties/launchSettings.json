@@ -19,7 +19,8 @@
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,
-      "applicationUrl": "http://192.168.3.158",
+      // "applicationUrl": "http://192.168.3.158",
+      "applicationUrl": "http://192.168.6.26", //conexão do rezende
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

@@ -117,15 +117,15 @@ const styles = StyleSheet.create({
     },
 
     titulo: {
-        textTransform: 'uppercase',
         color: '#009DF5',
-        fontWeight: 'bold',
-        fontFamily: "Bebas Neue",
-        fontSize: 26
+        fontFamily: "BebasNeue-Regular",
+        fontSize: 40
     },
 
     container_logo: {
         justifyContent: 'center',
+       
+        marginTop:30,
     },
 
     corujaLogo: {

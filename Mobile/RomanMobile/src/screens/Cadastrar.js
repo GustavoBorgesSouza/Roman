@@ -139,7 +139,8 @@ const styles = StyleSheet.create({
     },
 
     header: {
-        alignItems: 'center'
+        alignItems: 'center',
+        marginTop:30,
     },
 
     // estilo dos ícones da tabBar
@@ -157,16 +158,14 @@ const styles = StyleSheet.create({
     },
 
     titulo: {
-        textTransform: 'uppercase',
         color: '#009DF5',
-        fontWeight: 'bold',
-        fontFamily: "Bebas Neue",
-        fontSize: 26
+        fontFamily: "BebasNeue-Regular",
+        fontSize: 40
     },
 
     main: {
         flex: 2,
-        marginTop: 40,
+        marginTop: 25,
         width: '100%',
         alignItems: 'center'
     },
@@ -190,7 +189,8 @@ const styles = StyleSheet.create({
         borderStyle: 'solid',
         borderWidth: 1,
         backgroundColor: '#FFF',
-        marginTop: 10,
+        marginTop: 20,
+        paddingLeft:20,
     },
 
     inputMultiple: {
@@ -202,6 +202,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         backgroundColor: '#FFF',
         marginTop: 20,
+        paddingLeft:20,
     },
     btn: {
         width: '30%',
@@ -210,7 +211,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFF',
         borderRadius: 20,
         marginTop: 20,
-        height: 36,
+        height: 46,
         alignItems: 'center',
         justifyContent: 'center'
     },
